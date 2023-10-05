@@ -8,6 +8,6 @@ if __name__ == "__main__":
     elif (argc - 1) == 1:
         print("1 argument.")
     else:
-        print(f"{argc} arguments.")
+        print("{} arguments.".format(argc - 1))
     for arg in range(1, argc):
-        print(f"{arg}: {argv[arg]}")
+        print("{}: {}".format(arg, argv[arg]))
