@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def multiple_returns(sentence: str):
     length = len(sentence)
     if length == 0:
