@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 def search_replace(my_list: list, search, replace):
     newList = my_list.copy()
 
