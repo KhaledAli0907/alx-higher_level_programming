@@ -7,6 +7,6 @@ def roman_to_int(roman_string: str) -> int:
     result = 0
 
     for c in reversed(roman_string):
-        result += romanInts[c] if result < romanInts[c] * 4 else -romanInts[c]
+        result += romanInts[c] if result < romanInts[c] * 5 else -romanInts[c]
 
     return result
