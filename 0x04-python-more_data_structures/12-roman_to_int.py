@@ -6,12 +6,7 @@ def roman_to_int(roman_string: str) -> int:
     romanInts = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000}
     result = 0
 
-    for i in range(len(roman_string)):
-        if romanInts[roman_string[i]] > romanInts[roman_string[i - 1]] and i > 0:
-            result += romanInts[roman_string[i]] - 2 *\
-                romanInts[roman_string[i - 1]]
-
-        else:
-            result += romanInts[roman_string[i]]
+    for c in reversed(roman_string):
+        result += romanInts[c] if result < romanInts[c] * 4 else -romanInts[c]
 
     return result
