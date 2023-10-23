@@ -6,6 +6,8 @@ def safe_print_list(my_list=[], x=0) -> int:
             if i < x:
                 print("{}".format(n), end="")
                 i += 1
+            else:
+                break
         except:
             continue
     print()
