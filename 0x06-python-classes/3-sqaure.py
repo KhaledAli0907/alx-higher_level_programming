@@ -6,8 +6,7 @@ class Square:
     """Square Class"""
 
     def __init__(self, size=0):
-        """
-        Create new instance of sqaure class
+        """Create new instance of sqaure class
         Args:
             size: size of sqaure
         """
@@ -20,10 +19,8 @@ class Square:
         self.__size = size
 
     def area(self):
-        """
-        Calculate the current sqaure area
-
-        Returns: 
+        """Calculate the current sqaure area
+        Returns:
             the current square area
         """
-        return self.__size ** 2
+        return self.__size**2
