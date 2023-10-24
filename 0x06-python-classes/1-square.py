@@ -6,4 +6,9 @@ class Square:
     """Square Class"""
 
     def __init__(self, size):
-        self.size = size
+        """
+        Create new instrance of sqaure class
+        Args:
+            size: size of sqaure
+        """
+        self.__size = size
