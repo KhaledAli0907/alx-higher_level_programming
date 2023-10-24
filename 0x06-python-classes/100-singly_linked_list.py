@@ -70,13 +70,13 @@ class SinglyLinkedList:
 
     def __str__(self) -> str:
         """Represent the class object as a string"""
-        head = self.__head
+        temp_head = self.__head
         printed = []
 
-        while head:
+        while temp_head:
             printed.sort()
-            printed.append(str(head.data))
-            head = head.next_node
+            printed.append(str(temp_head.data))
+            temp_head = temp_head.next_node
 
         printed.sort(key=int)
         return "\n".join(printed)
