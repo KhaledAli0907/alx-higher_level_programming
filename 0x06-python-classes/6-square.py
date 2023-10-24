@@ -6,12 +6,14 @@ class Square:
     """Square Class"""
 
     def __init__(self, size=0, position=(0, 0)):
-        """Create new instance of sqaure class
+        """Creates new instances of square.
+
         Args:
-            size: size of sqaure
+            __size (int): size of the square (1 side).
+            __position (tuple): position of the square.
         """
-        self.__position = position
-        self.__size = size
+        self.size = size
+        self.position = position
 
     def area(self):
         """Calculate the current sqaure area
@@ -55,15 +57,14 @@ class Square:
         self.__position = value
 
     def my_print(self):
-        """prints in stdout the square with the character #
-        """
-
+        """Prints the sqaure to stdout"""
         if self.__size == 0:
             print()
-        else:
-            for j in range(self.__position[1]):
-                print()
-            for i in range(self.__size):
-                for k in range(self.__position[0]):
-                    print(" ",  end="")
-                print("#" * (self.__size))
+            return
+        # print newlines based in the y position
+        [print() for _ in range(0, self.__position[1])]
+        # print #'s and spaces
+        for _ in range(0, self.__size):
+            for _ in range(0, self.__position[0]):
+                print(" ", end="")
+            print("#" * self.__size)
