@@ -42,6 +42,7 @@ class Square:
 
     @position.setter
     def position(self, value: tuple):
+        """Check and set the postion value"""
         if (
             not (isinstance(value, tuple))
             or not (isinstance(value[0], int))
