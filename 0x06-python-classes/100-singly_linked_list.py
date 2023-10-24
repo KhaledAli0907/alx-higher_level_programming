@@ -64,8 +64,12 @@ class Node:
 class SinglyLinkedList:
     """Class to the singly linked list"""
 
-    def __init__(self) -> None:
-        """Initlize the list with head arg"""
+    def __init__(self):
+        """Creates new instances of SinglyLinkedList .
+
+        Args:
+            __head : head of the SinglyLinkedList .
+        """
         self.__head = None
 
     def __str__(self) -> str:
@@ -82,17 +86,13 @@ class SinglyLinkedList:
         return "\n".join(printed)
 
     def sorted_insert(self, value):
-        """Inserts a new node at a given position.
-
-        Args:
-            value: value.
-        """
-        if self.__head is None:
-            new_node = Node(value)
-            new_node.next_node = self.__head
-            self.__head = new_node
+        """Insert a new node into the correct sorted postion"""
+        if self.__head == None:
+            node = Node(value)
+            node.next_node = self.__head
+            self.__head = node
         else:
-            new_node = Node(value)
-            new_node.data = value
-            new_node.next_node = self.__head
-            self.__head = new_node
+            node = Node(value)
+            node.data = value
+            node.next_node = self.__head
+            self.__head = node
