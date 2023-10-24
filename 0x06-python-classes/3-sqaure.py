@@ -3,7 +3,12 @@
 
 
 class Square:
-    """Square Class"""
+    """
+    Class that defines properties of square by: (based on 2-square.py).
+
+    Attributes:
+        size: size of a square (1 side).
+    """
 
     def __init__(self, size=0):
         """
