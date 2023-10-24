@@ -43,18 +43,20 @@ class SinglyLinkedList:
         """Initlize the list with head arg"""
         self.__head = None
 
-    def __str__(self) -> str:
-        """Represent the class object as a string"""
-        head = self.__head
-        printed = []
+    def __str__(self):
+        """Represents the class objects as a string.
 
-        while head:
-            printed.sort()
-            printed.append(str(head.data))
-            head = head.next_node
+        Returns: The class object represented as a string.
+        """
+        temp_var = self.__head
+        print_node = []
+        while temp_var:
+            print_node.sort()
+            print_node.append(str(temp_var.data))
+            temp_var = temp_var.next_node
 
-        printed.sort(key=int)
-        return "\n".join(printed)
+        print_node.sort(key=int)
+        return "\n".join(print_node)
 
     def sorted_insert(self, value):
         """Insert a new node into the correct sorted postion"""
@@ -62,8 +64,8 @@ class SinglyLinkedList:
             node = Node(value)
             node.next_node = self.__head
             self.__head = node
-
-        node = Node(value)
-        node.data = value
-        node.next_node = self.__head
-        self.__head = node
+        else:
+            node = Node(value)
+            node.data = value
+            node.next_node = self.__head
+            self.__head = node
