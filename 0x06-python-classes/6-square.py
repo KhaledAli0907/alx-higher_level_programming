@@ -11,8 +11,8 @@ class Square:
             size: size of sqaure
             position: position of the sqaure
         """
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     def area(self):
         """Calculate the current sqaure area
