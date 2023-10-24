@@ -3,12 +3,7 @@
 
 
 class Square:
-    """
-    Class that defines properties of square by: (based on 2-square.py).
-
-    Attributes:
-        size: size of a square (1 side).
-    """
+    """Square Class"""
 
     def __init__(self, size=0):
         """
@@ -28,6 +23,7 @@ class Square:
         """
         Calculate the current sqaure area
 
-        Returns the current square area
+        Returns: 
+            the current square area
         """
         return self.__size**2
