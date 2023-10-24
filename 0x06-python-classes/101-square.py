@@ -70,10 +70,11 @@ class Square:
             print("#" * self.__size)
 
     def __str__(self) -> str:
+        """Represent the class as str object"""
         if self.__size == 0:
             return ""
 
         new_line = "\n" * self.position[1]
         hashes = "#" * self.size
         spaces = " " * self.position[0]
-        return new_line + "\n".join(spaces + hashes for h in range(self.size))
+        return new_line + "\n".join(spaces + hashes for _ in range(self.size))
