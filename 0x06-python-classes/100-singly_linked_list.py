@@ -30,7 +30,7 @@ class Node:
 
     @next_node.setter
     def next_node(self, value):
-        if not (isinstance(value, Node)):
+        if not (isinstance(value, Node)) and value is not None:
             raise TypeError("next_node must be a Node object")
 
         self.__next_node = value
@@ -43,20 +43,18 @@ class SinglyLinkedList:
         """Initlize the list with head arg"""
         self.__head = None
 
-    def __str__(self):
-        """Represents the class objects as a string.
+    def __str__(self) -> str:
+        """Represent the class object as a string"""
+        head = self.__head
+        printed = []
 
-        Returns: The class object represented as a string.
-        """
-        temp_var = self.__head
-        print_node = []
-        while temp_var:
-            print_node.sort()
-            print_node.append(str(temp_var.data))
-            temp_var = temp_var.next_node
+        while head:
+            printed.sort()
+            printed.append(str(head.data))
+            head = head.next_node
 
-        print_node.sort(key=int)
-        return "\n".join(print_node)
+        printed.sort(key=int)
+        return "\n".join(printed)
 
     def sorted_insert(self, value):
         """Insert a new node into the correct sorted postion"""
