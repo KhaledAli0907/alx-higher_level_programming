@@ -9,14 +9,14 @@ class Node:
     Attributes:
         data: data field of node."""
 
-    def __init__(self, data, next_node=None) -> None:
+    def __init__(self, data, next_node=None):
         """
         Creates new instances of node.
 
         Args:
             __data : data field of node."""
-        self.__data = data
-        self.__next_node = next_node
+        self.data = data
+        self.next_node = next_node
 
     @property
     def data(self) -> int:
