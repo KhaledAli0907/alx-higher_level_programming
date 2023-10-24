@@ -6,14 +6,13 @@ class Square:
     """Square Class"""
 
     def __init__(self, size=0, position=(0, 0)):
-        """Creates new instances of square.
-
+        """Create new instance of sqaure class
         Args:
-            __size (int): size of the square (1 side).
-            __position (tuple): position of the square.
+            size: size of sqaure
+            position: position of the sqaure
         """
-        self.size = size
-        self.position = position
+        self.__size = size
+        self.__position = position
 
     def area(self):
         """Calculate the current sqaure area
