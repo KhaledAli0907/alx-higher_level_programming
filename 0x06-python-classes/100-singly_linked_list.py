@@ -3,37 +3,64 @@
 
 
 class Node:
-    """Node of a singly linked list"""
+    """
+    Class that defines properties Node.
 
-    def __init__(self, data, next_node=None) -> None:
-        """Initilize the node"""
-        self.__data = data
-        self.__next_node = next_node
+    Attributes:
+        data: data field of node.
+    """
+
+    def __init__(self, data, next_node=None):
+        """Creates new instances of node.
+
+        Args:
+            __data : data field of node.
+        """
+        self.data = data
+        self.next_node = next_node
 
     @property
-    def data(self) -> int:
-        """Retrieve the data"""
+    def data(self):
+        """Retrieves the data field instance.
+
+        Returns: the data field of a node.
+        """
         return self.__data
+
+    @data.setter
+    def data(self, value):
+        """Propery setter for data.
+
+        Args:
+            value (int): data field of a node.
+
+        Raises:
+            TypeError: data must be an integer
+        """
+        if not isinstance(value, int):
+            raise TypeError("data must be an integer")
+        self.__data = value
 
     @property
     def next_node(self):
-        """Retrieve next node"""
+        """Retrives the next_node instance.
+
+        Returns: The next_node instance.
+        """
         return self.__next_node
-
-    @data.setter
-    def data(self, value: int):
-        """Set data in the node"""
-        if not (isinstance(value, int)):
-            raise TypeError("data must be an integer")
-
-        self.__data = value
 
     @next_node.setter
     def next_node(self, value):
-        """Setter for the next node"""
-        if not (isinstance(value, Node)) and value is not None:
-            raise TypeError("next_node must be a Node object")
+        """Property setter for Node.
 
+        Args:
+            value (None): next node of a Node.
+
+        Raises:
+            TypeError: next_node must be a Node object .
+        """
+        if value is not None and not isinstance(value, Node):
+            raise TypeError("next_node must be a Node object")
         self.__next_node = value
 
 
