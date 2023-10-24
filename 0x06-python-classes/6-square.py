@@ -14,6 +14,7 @@ class Square:
         self.size = size
         self.position = position
 
+    @property
     def area(self):
         """Calculate the current sqaure area
         Returns:
