@@ -43,7 +43,8 @@ class Square:
     @position.setter
     def position(self, value: tuple):
         if (
-            not (isinstance(value[0], int))
+            not (isinstance(value, tuple))
+            or not (isinstance(value[0], int))
             or not (isinstance(value[1], int))
             or (value[0] < 0)
             or (value[1] < 0)
@@ -56,13 +57,13 @@ class Square:
         """Prints the sqaure to stdout"""
         if self.__size == 0:
             print()
-
+            return
         # print newlines based in the y position
         [print() for _ in range(0, self.__position[1])]
         # print #'s and spaces
         for _ in range(0, self.__size):
             for _ in range(0, self.__position[0]):
                 print(" ", end="")
-            for _ in range(self.size):
+            for _ in range(0, self.__size):
                 print("#", end="")
             print()
