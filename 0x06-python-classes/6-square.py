@@ -46,7 +46,8 @@ class Square:
     def position(self, value):
         """Check and set the postion value"""
         if (
-            not (isinstance(value, tuple))
+            len(value) != 2
+            or not (isinstance(value, tuple))
             or not (isinstance(value[0], int))
             or not (isinstance(value[1], int))
             or (value[0] < 0)
