@@ -70,7 +70,7 @@ class Rectangle:
     @classmethod
     def square(cls, size=0):
         """Returns square"""
-        return Rectangle(size, size)
+        return cls(size, size)
 
     def __str__(self) -> str:
         """String representation to the class"""
