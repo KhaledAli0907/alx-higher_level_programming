@@ -4,9 +4,13 @@
 class MyInt(int):
     """class inhereting from int class"""
 
-    def __eq__(self, __value: object):
-        """Alternating equality"""
-        return not super().__eq__(__value)
+    def __new__(cls, *args, **kwargs):
+        return super(MyInt, cls).__new__(cls, *args, **kwargs)
 
-    def __ne__(self, __value: object):
-        return not super().__ne__(__value)
+    def __eq__(self, value) -> bool:
+        """Alternating equality"""
+        return not super().__eq__(value)
+
+    def __ne__(self, value) -> bool:
+        """Alternating non Equality"""
+        return not super().__ne__(value)
