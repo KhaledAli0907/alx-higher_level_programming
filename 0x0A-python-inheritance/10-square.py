@@ -1,14 +1,15 @@
 #!/usr/bin/python3
-Rectangle = __import__("9-rectangle.py").Rectangle
+Rectangle = __import__("9-rectangle").Rectangle
 
 """Sqaure module"""
 
 
-class Sqaure(Rectangle):
+class Square(Rectangle):
     """Sqaure"""
 
     def __init__(self, size) -> None:
-        self.integer_validator(size)
+        super().__init__(size, size)
+        self.integer_validator("size", size)
         self.__size = size
 
     def area(self) -> int:
