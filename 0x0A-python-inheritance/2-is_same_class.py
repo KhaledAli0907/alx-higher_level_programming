@@ -1,4 +1,7 @@
 #!/usr/bin/bash
+"""
+is_same class function
+"""
 
 
 def is_same_class(obj: object, a_class) -> bool:
