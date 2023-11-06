@@ -1,8 +1,9 @@
 #!/usr/bin/bash
 """
-is_same class function
+===================================
+module with method is_same_of_class
+===================================
 """
-
 
 def is_same_class(obj: object, a_class) -> bool:
     """Return true if object is an inctance of a class"""
