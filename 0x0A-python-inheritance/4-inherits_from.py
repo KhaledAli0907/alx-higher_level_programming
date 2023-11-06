@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-
-
 """
 ================================
 module fro inherits_from fnction
