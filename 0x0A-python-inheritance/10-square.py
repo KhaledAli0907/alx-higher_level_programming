@@ -1,11 +1,15 @@
 #!/usr/bin/python3
 Rectangle = __import__("9-rectangle").Rectangle
 
-"""Sqaure module"""
+"""
+===================================
+module with class BaseGeometry
+===================================
+"""
 
 
 class Square(Rectangle):
-    """Sqaure"""
+    """Sqaure Class"""
 
     def __init__(self, size) -> None:
         super().__init__(size, size)
