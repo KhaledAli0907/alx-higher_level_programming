@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+========================
+MyInt moule file
+========================
+"""
 
 
 class MyInt(int):
@@ -9,4 +14,5 @@ class MyInt(int):
         return not super().__eq__(__value)
 
     def __ne__(self, __value: object) -> bool:
+        """Alternating non-equality"""
         return not super().__ne__(__value)
