@@ -9,7 +9,20 @@ module with class Square
 
 
 class Square(Rectangle):
-    """Square class that inherits from Rectangle that inherits BaseGeometry"""
+    """
+    Square class
+    ...
+    
+    Atrributes
+    ----------
+    size: int
+        integer hold the size data
+        
+    Methods
+    -------
+    area()
+        calculate sqaurs's area
+    """
 
     def __init__(self, size) -> None:
         """initiate class method"""
