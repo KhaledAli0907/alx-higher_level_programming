@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 ========================
-MyInt moule file
+MyInt module file
 ========================
 """
 
