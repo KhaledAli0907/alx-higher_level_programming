@@ -9,10 +9,10 @@ module with class Square
 
 
 class Square(Rectangle):
-    """Sqaure Class"""
+    """Square class that inherits from Rectangle that inherits BaseGeometry"""
 
     def __init__(self, size) -> None:
-        """initiate class"""
+        """initiate class method"""
         super().__init__(size, size)
         self.integer_validator("size", size)
         self.__size = size
