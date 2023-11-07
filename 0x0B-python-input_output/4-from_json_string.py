@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-from json import loads
-
 """from_json_string function"""
+
+from json import loads
 
 
 def from_json_string(my_str):
