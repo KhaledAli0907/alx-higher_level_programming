@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-from json import dumps
+import json
 
 
 def to_json_string(my_obj):
     """Return json file as a string"""
-    return dumps(my_obj)
+    return json.dumps(my_obj)
