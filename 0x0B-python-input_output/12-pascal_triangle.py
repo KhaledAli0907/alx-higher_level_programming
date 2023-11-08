@@ -13,7 +13,7 @@ def pascal_triangle(n: int) -> list:
         temp = [1]
         for i in range(len(triangle) - 1):
             temp.append(triangle[i] + triangle[i + 1])
-        temp.append[1]
+        temp.append(1)
         lists.append(temp)
 
     return lists
