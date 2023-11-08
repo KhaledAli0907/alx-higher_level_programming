@@ -1,7 +1,11 @@
 #!/usr/bin/python3
 from sys import stdin
 
-"""script that reads stdin line by line and computes metrics"""
+"""
+script that reads stdin line by line and computes metrics
+"""
+
+
 status_code = {
     200: 0,
     301: 0,
