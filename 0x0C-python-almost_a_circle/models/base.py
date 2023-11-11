@@ -4,6 +4,7 @@
 
 
 class Base:
+    """Base clss for the project"""
     __nb_objects = 0
 
     def __init__(self, id=None) -> None:
