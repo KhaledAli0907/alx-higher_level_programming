@@ -72,13 +72,19 @@ class Rectangle(Base):
 
     def display(self) -> None:
         """Display rectangle cords to stdout"""
-        for _ in range(0, self.height):
-            for _ in range(0, self.width):
+        for _ in range(0, self.__height):
+            for _ in range(0, self.__width):
                 print("#")
             print()
 
     def __str__(self) -> str:
         """String represintation to the class"""
-        return (
-            f"[Rectangle] ({self.id}) {self.x}/{self.y}, - {self.width}/{self.height}"
-        )
+        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y}, - {self.__width}/{self.__height}"
+
+    def update(self, *args) -> None:
+        """Update class"""
+        self.id = args[0]
+        self.width(args[1])
+        self.height(args[2])
+        self.x(args[3])
+        self.y(args[4])
