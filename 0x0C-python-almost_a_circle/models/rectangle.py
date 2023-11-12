@@ -81,10 +81,25 @@ class Rectangle(Base):
         """String represintation to the class"""
         return f"[Rectangle] ({self.id}) {self.__x}/{self.__y}, - {self.__width}/{self.__height}"
 
-    def update(self, *args) -> None:
+    def update(self, *args, **kwargs) -> None:
         """Update class"""
-        self.id = args[0]
-        self.width(args[1])
-        self.height(args[2])
-        self.x(args[3])
-        self.y(args[4])
+        # Update attributes with positional arguments
+        if args and len(args) > 0:
+            self.id = args[0]
+            self.width = args[1]
+            self.height = args[2]
+            self.x = args[3]
+            self.y = args[4]
+        # Update attributes with keyword arguments
+        else:
+            for key, value in kwargs.items():
+                if key == "id":
+                    self.id = value
+                elif key == "width":
+                    self.width = value
+                elif key == "height":
+                    self.height = value
+                elif key == "x":
+                    self.x = value
+                elif key == "y":
+                    self.y = value
