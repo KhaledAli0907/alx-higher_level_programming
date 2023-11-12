@@ -2,7 +2,6 @@
 """Recatngle shape class based on base class"""
 from models.base import Base
 
-
 class Rectangle(Base):
     """A class that represents a rectangle"""
 
@@ -72,14 +71,16 @@ class Rectangle(Base):
 
     def display(self) -> None:
         """Display rectangle cords to stdout"""
-        for _ in range(0, self.__height):
-            for _ in range(0, self.__width):
-                print("#")
+        # Print new lines for the y coordinate
+        for _ in range(self.y):
             print()
+        # Print spaces and hashes for each row
+        for _ in range(self.height):
+            print(" " * self.x + "#" * self.width)
 
     def __str__(self) -> str:
         """String represintation to the class"""
-        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y}, - {self.__width}/{self.__height}"
+        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
 
     def update(self, *args, **kwargs) -> None:
         """Update class"""
