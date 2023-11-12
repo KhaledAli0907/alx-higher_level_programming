@@ -65,3 +65,20 @@ class Rectangle(Base):
         if type(value) is not int:
             raise TypeError("y must be an integer")
         self.__y = value  # Validate and assign value to the private attribute
+
+    def area(self) -> int:
+        """calculate rectangle area"""
+        return self.width * self.height
+
+    def display(self) -> None:
+        """Display rectangle cords to stdout"""
+        for _ in range(0, self.height):
+            for _ in range(0, self.width):
+                print("#")
+            print()
+
+    def __str__(self) -> str:
+        """String represintation to the class"""
+        return (
+            f"[Rectangle] ({self.id}) {self.x}/{self.y}, - {self.width}/{self.height}"
+        )
