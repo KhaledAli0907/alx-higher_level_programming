@@ -2,6 +2,7 @@
 """Recatngle shape class based on base class"""
 from models.base import Base
 
+
 class Rectangle(Base):
     """A class that represents a rectangle"""
 
@@ -104,3 +105,13 @@ class Rectangle(Base):
                     self.x = value
                 elif key == "y":
                     self.y = value
+
+    def to_dictionary(self) -> dict:
+        """Returns dictionary representation of a the Rectangle"""
+        return {
+            "id": self.id,
+            "width": self.width,
+            "height": self.height,
+            "x": self.x,
+            "y": self.y,
+        }
