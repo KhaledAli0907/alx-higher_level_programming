@@ -23,3 +23,8 @@ class TestSquare(unittest.TestCase):
         s2 = Square(3)
 
         self.assertEqual(s2.area(), 9)
+
+    def test_str(self):
+        """Test string"""
+        s3 = Square(2)
+        self.assertEqual(str(s3), "[Square] (3) 0/0 - 2")
