@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-import json
-
 """Base module file"""
+
+
+import json
 
 
 class Base:
