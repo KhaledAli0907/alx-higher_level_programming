@@ -1,4 +1,4 @@
-# models/rectangle.py
+#!/usr/bin/python3
 """Recatngle shape class based on base class"""
 from models.base import Base
 
