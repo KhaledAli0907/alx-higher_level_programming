@@ -17,5 +17,4 @@ function secondBiggest(numbers) {
 
 const args = process.argv.slice(2);
 
-console.log(args);
 console.log(secondBiggest(args));
