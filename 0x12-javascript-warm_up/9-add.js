@@ -3,7 +3,7 @@
 const argv = process.argv;
 
 if (isNaN(argv[2]) || isNaN(argv[3])) {
-  process.exit(1, console.log('Nan'));
+  process.exit(1, console.log('NaN'));
 }
 
 function add (a, b) {
