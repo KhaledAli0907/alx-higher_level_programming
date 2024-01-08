@@ -9,12 +9,13 @@ function secondBiggest(numbers) {
 	const intArr = numbers.map(Number);
 
 	// remove dups and sort
-	const unique = intArr.sort((a, b) => b - a);
+	const unique = [... new Set(intArr)].sort((a, b) => b - a);
 
 	//  return seeond elemnt in list
 	return unique[1];
 }
 
-const args = process.argv.slice[2];
+const args = process.argv.slice(2);
 
+console.log(args);
 console.log(secondBiggest(args));
