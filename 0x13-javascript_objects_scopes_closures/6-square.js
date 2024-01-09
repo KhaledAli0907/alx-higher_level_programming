@@ -30,12 +30,12 @@ class Square extends Rectangle {
   constructor (size) {
     super(size, size);
   }
-
-  charPrint (letter) {
-    if (!letter || letter === undefined) letter = 'X';
-
+  charPrint (c) {
+    if (c === undefined) {
+      c = 'X';
+    }
     for (let i = 0; i < this.height; i++) {
-      console.log(`${letter}`.repeat(this.width));
+      console.log(c.repeat(this.width));
     }
   }
 }
