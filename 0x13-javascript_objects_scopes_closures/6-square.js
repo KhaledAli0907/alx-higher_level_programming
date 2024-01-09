@@ -30,6 +30,7 @@ class Square extends Rectangle {
   constructor (size) {
     super(size, size);
   }
+
   charPrint (c) {
     if (c === undefined) {
       c = 'X';
