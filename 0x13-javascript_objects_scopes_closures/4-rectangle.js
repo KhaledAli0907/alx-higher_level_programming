@@ -8,14 +8,27 @@ class rectangle {
       this.height = h;
     } else {
       // if w or h is not a positive integer, create an empty object
-      object.assign(this, {});
+      Object.assign(this, {});
     }
   }
 
-  print() {
-	for (let row = 0; row < this.height; row++) {
-		console.log('x'.repeat(this.width));
-	}
+  print () {
+    for (let row = 0; row < this.height; row++) {
+      console.log('x'.repeat(this.width));
+    }
+  }
+
+  rotate () {
+    let temp = 0;
+    temp = this.width;
+    this.width = this.height;
+    this.height = temp;
+  }
+
+  double () {
+    this.width *= 2;
+    this.height *= 2;
   }
 }
+
 module.exports = rectangle;
