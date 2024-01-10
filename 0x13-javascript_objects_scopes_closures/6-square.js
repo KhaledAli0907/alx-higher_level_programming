@@ -1,36 +1,9 @@
 #!/usr/bin/node
-// class Rectangle that defines a rectangle
-class Rectangle {
-  constructor (w, h) {
-    if (w > 0 && h > 0) {
-      this.width = w;
-      this.height = h;
-    }
-  }
+// class Square that defines a square and inherits from Rectangle of 4-rectangle.js
 
-  print () {
-    for (let i = 0; i < this.height; i++) {
-      console.log('X'.repeat(this.width));
-    }
-  }
+const SquareBase = require('./5-square');
 
-  rotate () {
-    const temp = this.width;
-    this.width = this.height;
-    this.height = temp;
-  }
-
-  double () {
-    this.width *= 2;
-    this.height *= 2;
-  }
-}
-
-class Square extends Rectangle {
-  constructor (size) {
-    super(size, size);
-  }
-
+class Square extends SquareBase {
   charPrint (c) {
     if (c === undefined) {
       c = 'X';
@@ -40,4 +13,5 @@ class Square extends Rectangle {
     }
   }
 }
-module.exports = (Rectangle, Square);
+
+module.exports = Square;
