@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def find_peak(list_of_integers):
     # base case: empty list or single element
     if not list_of_integers or len(list_of_integers) == 1:
