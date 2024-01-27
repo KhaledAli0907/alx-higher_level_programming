@@ -1,8 +1,3 @@
 #!/bin/bash
-
-if [ $# -eq 0 ]; then
-  echo "Usage: $0 <URL>"
-  exit 1
-fi
-
+# Get the byte size of the HTTP response header for a given URL.
 curl -s "$1" | wc -c
