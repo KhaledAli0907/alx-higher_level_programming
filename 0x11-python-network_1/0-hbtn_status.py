@@ -12,6 +12,6 @@ if __name__ == '__main__':
         cont = res.read()
 
         print(f'Body response:\n\
-                \t- type: {type(cont)}\n\
-                \t- content: {cont}\n\
-                \t -utf8 content: {cont.decode("utf-8")}')
+\t- type: {type(cont)}\n\
+\t- content: {cont}\n\
+\t- utf8 content: {cont.decode("utf-8")}')
